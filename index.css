@@ -1,0 +1,147 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.bg-color{
+    
+}
+.container {
+    padding: 10px 20px;
+    margin: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.marquee {
+    background-color: #ccc;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+}
+
+.marquee h2 {
+    display: inline-block;
+    padding: 5px;
+    text-shadow: 2px 1px rgb(247, 0, 255);
+   
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.list-clothes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+
+}
+
+.product {
+    width: 22%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(6, 61, 124);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product p {
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(67, 67, 233);
+}
+
+.product h4 {
+    color: rgb(41, 41, 41);
+}
+
+.product .rate {
+    text-decoration: line-through;
+    color: red;
+    font-size: 14px;
+    margin-right: 10px;
+    /* Adjusted for spacing */
+}
+
+.product .offer {
+    color: rgb(12, 114, 63);
+    font-size: 16px;
+}
+
+.product .star {
+    color: rgb(231, 185, 32);
+}
+
+.product .cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.product button {
+    outline: none;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: rgb(7, 87, 60);
+    border-radius: 10px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background: rgb(52, 37, 184);
+}
+
+@media(max-width: 799px) {
+    .row .product {
+        width: 30%;
+        margin: 10px 0;
+    }
+}
+
+@media(max-width: 600px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row .product {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
